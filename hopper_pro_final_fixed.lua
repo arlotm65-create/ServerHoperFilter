@@ -81,6 +81,84 @@ local statusText = Instance.new("TextLabel"); statusText.Size = UDim2.new(1,-20,
 local filterPanel = Instance.new("Frame"); filterPanel.Size = UDim2.new(1,-32,0,92); filterPanel.Position = UDim2.new(0,16,0,184); filterPanel.BackgroundColor3 = Color3.fromRGB(30,40,55); filterPanel.Parent = main; addCorner(filterPanel,8)
 local filterLabel = Instance.new("TextLabel"); filterLabel.Size = UDim2.new(1,-20,0,24); filterLabel.Position = UDim2.new(0,10,0,6); filterLabel.BackgroundTransparency=1; filterLabel.Font=Enum.Font.GothamBold; filterLabel.Text="⚙️ FILTROS"; filterLabel.TextSize=14; filterLabel.TextColor3=Color3.fromRGB(255,255,255); filterLabel.Parent = filterPanel
 
+local function makeDraggable(frame)
+    local dragging = false
+    local dragStart = nil
+    local startPos = nil
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = frame.Position
+        end
+    end)
+
+    frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            if dragging then
+                local delta = input.Position - dragStart
+                frame.Position = UDim2.new(
+                    startPos.X.Scale,
+                    startPos.X.Offset + delta.X,
+                    startPos.Y.Scale,
+                    startPos.Y.Offset + delta.Y
+                )
+            end
+        end
+    end)
+
+    frame.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = false
+        end
+    end)
+end
+
+local bubbleButton = Instance.new("Frame")
+bubbleButton.Size = UDim2.new(0, 60, 0, 60)
+bubbleButton.Position = UDim2.new(0, 30, 0.8, 0)
+bubbleButton.BackgroundColor3 = Color3.fromRGB(0, 162, 255)
+bubbleButton.Visible = false
+bubbleButton.Active = true
+bubbleButton.Draggable = false
+addCorner(bubbleButton, 60)
+
+local bubbleText = Instance.new("TextButton")
+bubbleText.Size = UDim2.new(1, 0, 1, 0)
+bubbleText.BackgroundTransparency = 1
+bubbleText.Text = "🔍"
+bubbleText.Font = Enum.Font.GothamBold
+bubbleText.TextScaled = true
+bubbleText.TextColor3 = Color3.new(1, 1, 1)
+bubbleText.Parent = bubbleButton
+
+bubbleButton.Parent = playerGui.HOPPER_GUI -- Ajusta el nombre si tu ScreenGui cambia
+makeDraggable(bubbleButton)
+
+local minimizeButton = Instance.new("TextButton")
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -40, 0, 10)
+minimizeButton.Text = "-"
+minimizeButton.TextScaled = true
+minimizeButton.Font = Enum.Font.GothamBold
+minimizeButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+minimizeButton.TextColor3 = Color3.new(1, 1, 1)
+addCorner(minimizeButton, 8)
+minimizeButton.Parent = MAIN_FRAME  -- tu frame principal
+
+minimizeButton.MouseButton1Click:Connect(function()
+    MAIN_FRAME.Visible = false
+    bubbleButton.Visible = true
+end)
+
+bubbleText.MouseButton1Click:Connect(function()
+    bubbleButton.Visible = false
+    MAIN_FRAME.Visible = true
+end)
+
+makeDraggable(MAIN_FRAME)
+
 -- rangeLabel created before minButtons (fix)
 local rangeLabel = Instance.new("TextLabel"); rangeLabel.Size = UDim2.new(1,-20,0,20); rangeLabel.Position = UDim2.new(0,10,0,64); rangeLabel.BackgroundTransparency=1; rangeLabel.Font=Enum.Font.Gotham; rangeLabel.TextSize=12; rangeLabel.TextColor3=Color3.fromRGB(200,200,200); rangeLabel.TextXAlignment=Enum.TextXAlignment.Left; rangeLabel.Parent=filterPanel
 
