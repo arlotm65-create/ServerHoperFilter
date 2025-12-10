@@ -42,7 +42,7 @@ local function formatNumber(num)
     end
 end
 
--- ENVIAR A DISCORD
+-- ENVIAR A DISCORD (Versión compatible con más executors)
 local function sendToDiscord(brainrotData)
     if not webhookEnabled or DISCORD_WEBHOOK == "https://discord.com/api/webhooks/TU_WEBHOOK_AQUI" then
         warn("⚠️ Webhook no configurado o desactivado")
@@ -52,20 +52,10 @@ local function sendToDiscord(brainrotData)
     local jobId = brainrotData.serverId
     local placeId = PLACE_ID
     
-    -- Crear link de join
-    local joinLink = string.format("https://www.roblox.com/games/start?placeId=%s&launchData=%%7B%%22server%%22%%3A%%22%s%%22%%7D", placeId, jobId)
-    
-    -- Crear script de join
-    local joinScript = string.format(
-        'game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s", game.Players.LocalPlayer)',
-        placeId,
-        jobId
-    )
-    
     -- Crear embed para Discord
     local embed = {
         title = "🎯 Sk Notify | Notify 10m+ plus",
-        color = 15158332, -- Color rojo
+        color = 15158332,
         fields = {
             {
                 name = "**Brainrot:**",
@@ -89,12 +79,12 @@ local function sendToDiscord(brainrotData)
             },
             {
                 name = "**Join Link:**",
-                value = "[Clique aqui para entrar](" .. joinLink .. ")",
+                value = "[Clique aqui para entrar](https://www.roblox.com/games/start?placeId=" .. placeId .. "&launchData={\"server\":\"" .. jobId .. "\"})",
                 inline = false
             },
             {
                 name = "**Join Script PC:**",
-                value = "```lua\n" .. joinScript .. "\n```",
+                value = "```lua\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(" .. placeId .. ", \"" .. jobId .. "\", game.Players.LocalPlayer)\n```",
                 inline = false
             }
         },
@@ -108,53 +98,61 @@ local function sendToDiscord(brainrotData)
         embeds = {embed}
     }
     
-    local success, result = pcall(function()
-        local response = request({
-            Url = DISCORD_WEBHOOK,
-            Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json"
-            },
-            Body = HttpService:JSONEncode(data)
-        })
-        return response
-    end)
+    local jsonData = HttpService:JSONEncode(data)
     
-    if not success then
-        -- Intento alternativo con syn.request
-        success, result = pcall(function()
+    -- Intentar múltiples métodos
+    local success = false
+    local methods = {
+        function() -- Método 1: request
+            return request({
+                Url = DISCORD_WEBHOOK,
+                Method = "POST",
+                Headers = {["Content-Type"] = "application/json"},
+                Body = jsonData
+            })
+        end,
+        function() -- Método 2: syn.request
             return syn.request({
                 Url = DISCORD_WEBHOOK,
                 Method = "POST",
-                Headers = {
-                    ["Content-Type"] = "application/json"
-                },
-                Body = HttpService:JSONEncode(data)
+                Headers = {["Content-Type"] = "application/json"},
+                Body = jsonData
             })
-        end)
-    end
-    
-    if not success then
-        -- Último intento con http_request
-        success, result = pcall(function()
+        end,
+        function() -- Método 3: http_request
             return http_request({
                 Url = DISCORD_WEBHOOK,
                 Method = "POST",
-                Headers = {
-                    ["Content-Type"] = "application/json"
-                },
-                Body = HttpService:JSONEncode(data)
+                Headers = {["Content-Type"] = "application/json"},
+                Body = jsonData
             })
-        end)
+        end,
+        function() -- Método 4: http.request (para algunos executors móviles)
+            if http and http.request then
+                return http.request({
+                    Url = DISCORD_WEBHOOK,
+                    Method = "POST",
+                    Headers = {["Content-Type"] = "application/json"},
+                    Body = jsonData
+                })
+            end
+        end
+    }
+    
+    for i, method in ipairs(methods) do
+        local ok, result = pcall(method)
+        if ok and result then
+            print("✅ Enviado a Discord usando método", i)
+            success = true
+            break
+        end
     end
     
-    if success then
-        print("✅ Enviado a Discord!")
-        return true
-    else
-        warn("❌ Error al enviar a Discord:", result)
-        return false
+    if not success then
+        warn("❌ Ningún método HTTP funcionó. Tu executor puede no soportar webhooks.")
     end
+    
+    return success
 end
 
 -- GUI
