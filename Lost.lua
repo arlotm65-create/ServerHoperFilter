@@ -1,3 +1,41 @@
+-- ════════════════════════════════════════════════════════════════
+-- 🔐 SISTEMA DE AUTENTICACIÓN POR KEY
+-- ════════════════════════════════════════════════════════════════
+
+local VALID_KEYS = {
+    ["KEY-ABC123-2024"] = true,  -- Tu key personal
+    ["KEY-FRIEND1-XYZ"] = true,  -- Key para amigo 1
+    ["KEY-FRIEND2-789"] = true,  -- Key para amigo 2
+    -- Agrega más keys aquí cuando quieras dar acceso
+}
+
+local function checkKey()
+    local key = _G.ScriptKey or ""
+    
+    if not VALID_KEYS[key] then
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "⛔ Acceso Denegado",
+            Text = "Key inválida o no autorizada",
+            Duration = 5
+        })
+        return false
+    end
+    
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "✅ Acceso Concedido",
+        Text = "Key verificada correctamente",
+        Duration = 3
+    })
+    return true
+end
+
+if not checkKey() then
+    return -- Detiene el script si la key es inválida
+end
+
+-- ════════════════════════════════════════════════════════════════
+-- TU SCRIPT ORIGINAL CONTINÚA AQUÍ...
+-- ════════════════════════════════════════
 -- Hopper PRO - Versión Final Mejorada
 print("🚀 HOPPER PRO - Versión Mejorada")
 
