@@ -1,12 +1,527 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+-- Hopper PRO - Versión Final Mejorada
+print("🚀 HOPPER PRO - Versión Mejorada")
 
-]]--
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then local v87=0;while true do if (v87==0) then v19=v0(v3(v30,1,1));return "";end end else local v88=0;local v89;while true do if (v88==0) then v89=v2(v0(v30,16));if v19 then local v120=v5(v89,v19);v19=nil;return v120;else return v89;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v90=(v31/((5 -3)^(v32-(2 -1))))%(2^(((v33-(1 -(1637 -(1523 + 114)))) -(v32-(2 -(1 + 0)))) + (620 -(555 + 64)))) ;return v90-(v90%(932 -(857 + 74))) ;else local v91=(809 -241) -(367 + 201) ;local v92;while true do if (v91==(927 -(214 + 713))) then v92=(1 + 1)^(v32-(1 + 0)) ;return (((v31%(v92 + v92))>=v92) and (878 -(282 + 595))) or 0 ;end end end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35,v36=v1(v16,v18,v18 + (1067 -(68 + 997)) );v18=v18 + (1272 -(226 + 1044)) ;return (v36 * (1114 -858)) + v35 ;end local function v23() local v37,v38,v39,v40=v1(v16,v18,v18 + ((286 -166) -(32 + 85)) );v18=v18 + 4 ;return (v40 * (16441815 + 335401)) + (v39 * (14533 + 51003)) + (v38 * (1213 -(892 + 65))) + v37 ;end local function v24() local v41=v23();local v42=v23();local v43=1 -0 ;local v44=(v20(v42,1 -0 ,370 -(87 + (826 -563)) ) * (((200 -(10 + 8)) -(67 + (434 -321)))^(24 + 8))) + v41 ;local v45=v20(v42,51 -30 ,(465 -(416 + 26)) + 8 );local v46=((v20(v42,127 -95 )==(953 -(802 + 150))) and  -(2 -(3 -2))) or (1 -0) ;if (v45==(0 + 0)) then if (v44==(997 -(915 + 82))) then return v46 * (0 -0) ;else local v111=0 + 0 ;while true do if (v111==0) then v45=1 -0 ;v43=1187 -(1069 + 118) ;break;end end end elseif (v45==(4643 -(1115 + 1481))) then return ((v44==0) and (v46 * ((1 -0)/(0 + 0)))) or (v46 * NaN) ;end return v8(v46,v45-(1817 -794) ) * (v43 + (v44/((2 + (0 -0))^(843 -(368 + 423))))) ;end local function v25(v47) local v48=438 -(145 + 293) ;local v49;local v50;while true do if (v48==(431 -((160 -116) + 386))) then v49=v3(v16,v18,(v18 + v47) -1 );v18=v18 + v47 ;v48=1488 -(998 + 488) ;end if (v48==(1 + (3 -2))) then v50={};for v112=1 + 0 , #v49 do v50[v112]=v2(v1(v3(v49,v112,v112)));end v48=(1634 -(814 + 45)) -(201 + 571) ;end if (v48==3) then return v6(v50);end if (v48==(1138 -(116 + 1022))) then v49=nil;if  not v47 then v47=v23();if (v47==(0 -0)) then return "";end end v48=1 + 0 ;end end end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v51=(function() return function(v93,v94,v95,v96,v97,v98,v99,v100,v101) local v102=(function() return 0 + 0 ;end)();local v93=(function() return;end)();local v94=(function() return;end)();while true do if (v102~=(142 -(72 + 70))) then else local v118=(function() return 0;end)();while true do if ((1263 -(1091 + 171))~=v118) then else v102=(function() return 1 + 0 ;end)();break;end if (0~=v118) then else v93=(function() return 0 -0 ;end)();v94=(function() return nil;end)();v118=(function() return 3 -2 ;end)();end end end if (v102==1) then local v119=(function() return 374 -(123 + 251) ;end)();while true do if (v119~=0) then else while true do if (v93~=0) then else v94=(function() return v95();end)();if (v96(v94, #"[", #"!")==(0 -0)) then local v123=(function() return 698 -(208 + 490) ;end)();local v124=(function() return;end)();local v125=(function() return;end)();local v126=(function() return;end)();while true do if (v123~=0) then else local v137=(function() return 0 + 0 ;end)();while true do if (1~=v137) then else v123=(function() return 1;end)();break;end if (v137~=0) then else v124=(function() return v96(v94,1 + 1 , #"91(");end)();v125=(function() return v96(v94, #"asd1",6);end)();v137=(function() return 1;end)();end end end if (v123~=1) then else local v138=(function() return 836 -(660 + 176) ;end)();while true do if ((1 + 0)~=v138) then else v123=(function() return 204 -(14 + 188) ;end)();break;end if (v138==0) then v126=(function() return {v97(),v97(),nil,nil};end)();if (v124==(0 + 0)) then local v522=(function() return 0;end)();local v523=(function() return;end)();while true do if ((0 + 0)==v522) then v523=(function() return 0 + 0 ;end)();while true do if (v523~=(0 -0)) then else v126[ #"91("]=(function() return v97();end)();v126[ #".dev"]=(function() return v97();end)();break;end end break;end end elseif (v124== #",") then v126[ #"asd"]=(function() return v98();end)();elseif (v124==2) then v126[ #"-19"]=(function() return v98() -((2 -0)^(44 -28)) ;end)();elseif (v124~= #"asd") then else local v577=(function() return 0 + 0 ;end)();local v578=(function() return;end)();while true do if (v577==0) then v578=(function() return 0;end)();while true do if (v578==0) then v126[ #"gha"]=(function() return v98() -((2 + 0)^16) ;end)();v126[ #".dev"]=(function() return v97();end)();break;end end break;end end end v138=(function() return 1;end)();end end end if (v123==(399 -(115 + 281))) then if (v96(v125, #"91(", #"19(")== #"<") then v126[ #"xnxx"]=(function() return v99[v126[ #"0313"]];end)();end v100[v101]=(function() return v126;end)();break;end if (v123==2) then if (v96(v125, #"!", #">")== #"|") then v126[2]=(function() return v99[v126[2]];end)();end if (v96(v125,4 -2 ,2 + 0 )~= #"~") then else v126[ #"91("]=(function() return v99[v126[ #"xxx"]];end)();end v123=(function() return 3;end)();end end end break;end end return v93,v94,v95,v96,v97,v98,v99,v100,v101;end end end end end;end)();local v52=(function() return function(v103,v104,v105) local v106=(function() return 0;end)();local v107=(function() return;end)();while true do if (v106~=0) then else v107=(function() return 0;end)();while true do if ((0 -0)==v107) then v103[v104-#"}" ]=(function() return v105();end)();return v103,v104,v105;end end break;end end end;end)();local v53=(function() return {};end)();local v54=(function() return {};end)();local v55=(function() return {};end)();local v56=(function() return {v53,v54,nil,v55};end)();local v57=(function() return v23();end)();local v58=(function() return {};end)();for v66= #"\\",v57 do local v67=(function() return 0;end)();local v68=(function() return;end)();local v69=(function() return;end)();local v70=(function() return;end)();while true do if (v67==1) then v70=(function() return nil;end)();while true do if (v68==0) then v69=(function() return v21();end)();v70=(function() return nil;end)();v68=(function() return 1;end)();end if (v68==(3 -2)) then if (v69== #"{") then v70=(function() return v21()~=0 ;end)();elseif (v69==(869 -(550 + 317))) then v70=(function() return v24();end)();elseif (v69~= #"19(") then else v70=(function() return v25();end)();end v58[v66]=(function() return v70;end)();break;end end break;end if (v67~=(0 -0)) then else v68=(function() return 0;end)();v69=(function() return nil;end)();v67=(function() return 1 -0 ;end)();end end end v56[ #"xxx"]=(function() return v21();end)();for v71= #">",v23() do FlatIdent_912A7,Descriptor,v21,v20,v22,v23,v58,v53,v71=(function() return v51(FlatIdent_912A7,Descriptor,v21,v20,v22,v23,v58,v53,v71);end)();end for v72= #"/",v23() do v54,v72,v28=(function() return v52(v54,v72,v28);end)();end return v56;end local function v29(v60,v61,v62) local v63=v60[2 -1 ];local v64=v60[287 -(134 + 151) ];local v65=v60[1668 -(970 + (1059 -364)) ];return function(...) local v73=v63;local v74=v64;local v75=v65;local v76=v27;local v77=1 -0 ;local v78= -(1991 -(582 + 1408));local v79={};local v80={...};local v81=v12("#",...) -(1 -0) ;local v82={};local v83={};for v108=0,v81 do if ((1122<=3910) and (v108>=v75)) then v79[v108-v75 ]=v80[v108 + ((1247 -(485 + 759)) -2) ];else v83[v108]=v80[v108 + (1825 -(1195 + 629)) ];end end local v84=(v81-v75) + 1 ;local v85;local v86;while true do v85=v73[v77];v86=v85[1 -0 ];if (v86<=61) then if ((v86<=((626 -355) -(187 + 54))) or (4322<3616)) then if ((12<4208) and (v86<=(794 -(162 + 618)))) then if (v86<=6) then if (v86<=(2 + 0)) then if (v86<=(0 + 0)) then local v127=v85[2];local v128=v83[v85[6 -3 ]];v83[v127 + (1 -0) ]=v128;v83[v127]=v128[v85[1193 -(442 + 747) ]];elseif (v86>(1 + 0)) then local v140=1636 -(1373 + 263) ;local v141;while true do if (0==v140) then v141=v85[2];v83[v141]=v83[v141](v13(v83,v141 + (1001 -(451 + 549)) ,v78));break;end end else v83[v85[1 + (1136 -(832 + 303)) ]]=v62[v85[4 -1 ]];end elseif (v86<=(6 -2)) then if (v86>(1387 -(746 + 638))) then v83[v85[(947 -(88 + 858)) + 1 ]]=v83[v85[4 -1 ]] + v85[345 -(218 + 123) ] ;else local v145=1581 -(1535 + 15 + 31) ;local v146;local v147;local v148;local v149;while true do if ((1 + 0)==v145) then v78=(v148 + v146) -1 ;v149=0 + 0 ;v145=562 -(306 + 254) ;end if (v145==(1 + 1)) then for v476=v146,v78 do local v477=0 -0 ;while true do if ((v477==0) or (2990<=2980)) then v149=v149 + (1468 -(745 + 154 + 568)) ;v83[v476]=v147[v149];break;end end end break;end if (v145==(0 + 0)) then v146=v85[2];v147,v148=v76(v83[v146](v83[v146 + (2 -1) ]));v145=604 -(268 + 335) ;end end end elseif (v86==(295 -(60 + 230))) then v83[v85[2]]=v83[v85[575 -(426 + 146) ]]%v83[v85[1 + 3 ]] ;else local v151=1456 -(282 + 1174) ;local v152;local v153;local v154;while true do if ((v151==((34 + 778) -(569 + (1031 -(766 + 23))))) or (2575>=4275)) then v154=v85[8 -5 ];for v478=1 + 0 ,v154 do v153[v478]=v83[v152 + v478 ];end break;end if (v151==(1024 -(706 + 318))) then v152=v85[1253 -(721 + 530) ];v153=v83[v152];v151=1272 -(945 + 326) ;end end end elseif (v86<=(24 -14)) then if (v86<=(8 + 0)) then if ((v86>((3490 -2783) -(271 + 429))) or (3626<=1306)) then v83[v85[2 + 0 ]][v83[v85[1503 -(1408 + 92) ]]]=v83[v85[(1490 -400) -(461 + 625) ]];else v83[v85[1290 -(993 + 295) ]]=v61[v85[3]];end elseif ((1368<3780) and (v86>(1 + (20 -12)))) then v83[v85[1173 -(418 + 753) ]]=v85[(6 -4) + 1 ]~=0 ;else v83[v85[1 + 1 ]]=v83[v85[3]]/v85[4] ;end elseif (v86<=(4 + 8)) then if (v86==(3 + 8)) then v83[v85[531 -(406 + 123) ]]=v83[v85[1772 -(1749 + 20) ]];else local v163=v85[1 + 1 ];local v164=v83[v85[1325 -(1249 + 73) ]];v83[v163 + 1 + 0 ]=v164;v83[v163]=v164[v83[v85[1149 -(466 + 679) ]]];end elseif ((v86==((1103 -(1036 + 37)) -17)) or (3169==2273)) then local v168=0 -(0 + 0) ;local v169;local v170;local v171;while true do if (v168==(1902 -(106 + 1794))) then if ((2481<=3279) and (v170>0)) then if ((v171<=v83[v169 + 1 + 0 ]) or (1063<=877)) then v77=v85[1 + 2 ];v83[v169 + 3 ]=v171;end elseif ((2314==2314) and (v171>=v83[v169 + (2 -1) ])) then v77=v85[3];v83[v169 + (7 -(7 -3)) ]=v171;end break;end if ((114 -(4 + 110))==v168) then v169=v85[586 -(57 + 415 + 112) ];v170=v83[v169 + (1429 -(41 + 1386)) ];v168=104 -(17 + 86) ;end if ((924>=477) and (v168==(1 + 0))) then v171=v83[v169] + v170 ;v83[v169]=v171;v168=3 -1 ;end end else v83[v85[1482 -(641 + 839) ]][v83[v85[8 -(918 -(910 + 3)) ]]]=v85[170 -(122 + 44) ];end elseif ((1813<=3778) and (v86<=(37 -15))) then if ((4150==4150) and (v86<=(59 -41))) then if ((432<=3007) and (v86<=(14 + 2))) then if ((v86==15) or (408>2721)) then local v174=0 + 0 ;local v175;while true do if (v174==(0 -0)) then v175=v85[2];v83[v175](v83[v175 + ((168 -102) -(30 + 35)) ]);break;end end elseif (v83[v85[2 + 0 ]]<v85[1261 -(1043 + 214) ]) then v77=v77 + (3 -2) ;else v77=v85[1215 -(323 + 889) ];end elseif (v86>(45 -28)) then local v176=580 -(361 + 219) ;local v177;local v178;local v179;local v180;while true do if ((v176==(320 -(53 + 267))) or (3418<2497)) then v177=v85[1 + 1 ];v178,v179=v76(v83[v177](v13(v83,v177 + (414 -(15 + 398)) ,v78)));v176=983 -(18 + 964) ;end if ((3 -2)==v176) then v78=(v179 + v177) -(1 + 0) ;v180=0 + 0 ;v176=852 -(20 + 830) ;end if (v176==(2 + 0)) then for v481=v177,v78 do local v482=126 -(116 + 10) ;while true do if (v482==0) then v180=v180 + 1 + 0 ;v83[v481]=v178[v180];break;end end end break;end end else do return v83[v85[2]];end end elseif (v86<=(758 -(542 + 196))) then if ((1735<2169) and (v86==(40 -21))) then local v181=0 + 0 ;local v182;local v183;local v184;local v185;while true do if ((3890>=3262) and (v181==1)) then v78=(v184 + v182) -(1 + 0) ;v185=0 + 0 ;v181=4 -2 ;end if (v181==(0 -0)) then v182=v85[1553 -(1126 + 425) ];v183,v184=v76(v83[v182](v13(v83,v182 + (406 -(118 + 287)) ,v85[11 -8 ])));v181=1122 -(118 + (2687 -(1466 + 218))) ;end if (v181==(1 + 1)) then for v483=v182,v78 do local v484=0 -0 ;while true do if (v484==0) then v185=v185 + (378 -(142 + 235)) ;v83[v483]=v183[v185];break;end end end break;end end else local v186=0 -0 ;local v187;local v188;local v189;while true do if ((v186==1) or (4356>=4649)) then v189={};v188=v10({},{__index=function(v485,v486) local v487=0 + 0 ;local v488;while true do if ((3904==3904) and (v487==0)) then v488=v189[v486];return v488[978 -(553 + 424) ][v488[3 -1 ]];end end end,__newindex=function(v489,v490,v491) local v492=v189[v490];v492[1 + 0 ][v492[2 + 0 ]]=v491;end});v186=2;end if ((v186==(810 -(329 + 479))) or (2860>=3789)) then for v494=1 + 0 ,v85[4] do local v495=0 + 0 ;local v496;while true do if ((v495==(1 + 0)) or (1086>4449)) then if (v496[2 -(855 -(174 + 680)) ]==(219 -140)) then v189[v494-(2 -1) ]={v83,v496[14 -11 ]};else v189[v494-(754 -(239 + 514)) ]={v61,v496[3 + 0 ]};end v82[ #v82 + 1 + 0 ]=v189;break;end if (v495==0) then v77=v77 + 1 ;v496=v73[v77];v495=2 -1 ;end end end v83[v85[2]]=v29(v187,v188,v62);break;end if (v186==(1202 -(373 + 829))) then v187=v74[v85[734 -(476 + 255) ]];v188=nil;v186=1131 -(369 + 761) ;end end end elseif (v86>(13 + 8)) then if ((4981>546) and (v83[v85[2]]==v85[6 -2 ])) then v77=v77 + (1 -0) ;else v77=v85[241 -(64 + 174) ];end else local v190=v85[(1478 -(29 + 1448)) + 1 ];local v191,v192=v76(v83[v190](v13(v83,v190 + (1 -(1389 -(135 + 1254))) ,v85[339 -(144 + 192) ])));v78=(v192 + v190) -(217 -(42 + 174)) ;local v193=0 + (0 -0) ;for v353=v190,v78 do local v354=0;while true do if ((((0 -0) + 0)==v354) or (2366<=8)) then v193=v193 + 1 + 0 ;v83[v353]=v191[v193];break;end end end end elseif ((v86<=(1530 -(363 + 1141))) or (2590==2864)) then if (v86<=(1604 -(1183 + 397))) then if ((v86>(16 + 7)) or (2624>4149)) then v83[v85[2]]=v85[3];else local v196=0 -(1527 -(389 + 1138)) ;local v197;while true do if ((v196==(574 -(102 + 472))) or (2618>=4495)) then v197=v85[2];do return v83[v197](v13(v83,v197 + 1 + 0 ,v85[3 + 0 ]));end break;end end end elseif ((v86==((1888 + 112) -(1913 + 62))) or (2485>=3131)) then v83[v85[2]]= #v83[v85[3]];else v83[v85[2 + 0 ]]=v62[v85[3]];end elseif (v86<=(73 -45)) then if (v86==(1960 -(314 + 251 + 1368))) then v83[v85[7 -5 ]][v85[1664 -(1378 + 99 + 184) ]]=v85[4];elseif (v85[2 -0 ]==v83[v85[4 + 0 ]]) then v77=v77 + 1 ;else v77=v85[(2404 -(320 + 1225)) -(564 + 292) ];end elseif ((v86>(49 -20)) or (2804<=2785)) then local v203=0 -0 ;local v204;while true do if (v203==0) then v204=v85[306 -((433 -189) + 60) ];do return v13(v83,v204,v204 + v85[3] );end break;end end else v83[v85[2 + 0 ]][v85[(294 + 185) -(41 + 435) ]]=v83[v85[1005 -(938 + 63) ]];end elseif (v86<=45) then if (v86<=(29 + 8)) then if ((v86<=(1158 -(936 + 189))) or (4571==3415)) then if (v86<=(11 + 20)) then v83[v85[1615 -(1565 + 48) ]]=v83[v85[2 + (1465 -(157 + 1307)) ]][v83[v85[4]]];elseif (v86==(1891 -(821 + 1038))) then if ((v83[v85[(2844 -1704) -(782 + 356) ]]==v83[v85[271 -(176 + 91) ]]) or (4441>4787)) then v77=v77 + 1 + 0 ;else v77=v85[7 -4 ];end elseif ((1920==1920) and (v83[v85[2]]==v85[4])) then v77=v77 + 1 ;else v77=v85[4 -1 ];end elseif (v86<=(51 -16)) then if ((v86==(1126 -(975 + 117))) or (647==4477)) then v83[v85[1877 -(157 + 1718) ]]=v83[v85[3 + 0 ]]/v85[14 -10 ] ;elseif v83[v85[2]] then v77=v77 + (3 -2) ;else v77=v85[1021 -(697 + 120 + 201) ];end elseif ((3819==3819) and (v86>36)) then if ((v83[v85[5 -3 ]]==v83[v85[8 -4 ]]) or (1466>4360)) then v77=v77 + (2 -(2 -1)) ;else v77=v85[(1028 -(834 + 192)) + 1 ];end else v83[v85[3 -1 ]]=v83[v85[7 -4 ]] * v85[4] ;end elseif (v86<=(1268 -(322 + 58 + 847))) then if (v86<=(650 -(602 + 9))) then if (v86==38) then local v209=1189 -(449 + 740) ;local v210;local v211;while true do if ((v209==(872 -(826 + 46))) or (14>994)) then v210=v85[950 -(63 + 182 + 702) ];v211=v83[v210];v209=3 -2 ;end if (v209==(1 + 0 + 0)) then for v499=v210 + (1899 -(260 + (2537 -899))) ,v85[444 -((686 -(300 + 4)) + 58) ] do v211=v211   .. v83[v499] ;end v83[v85[(2 + 4) -4 ]]=v211;break;end end else v83[v85[2 + 0 ]]=v83[v85[5 -2 ]]%v85[11 -(18 -11) ] ;end elseif (v86==(1245 -(902 + (665 -(112 + 250))))) then v83[v85[2]]= not v83[v85[5 -2 ]];else v83[v85[4 -2 ]]={};end elseif ((401<=734) and (v86<=(4 + 16 + 23))) then if ((v86>42) or (2167>=3426)) then local v215=0;local v216;while true do if (v215==(1690 -((2808 -1687) + 569))) then v216=v85[216 -(22 + 110 + 82) ];v83[v216]=v83[v216]();break;end end elseif ((764<3285) and  not v83[v85[685 -(483 + 104 + 96) ]]) then v77=v77 + (1464 -(1404 + 59)) ;else v77=v85[8 -5 ];end elseif (v86==44) then v83[v85[2 -0 ]]=v83[v85[768 -(351 + 117 + 297) ]] + v83[v85[566 -(334 + 228) ]] ;else v83[v85[6 -4 ]]=v83[v85[6 -3 ]] + v85[4] ;end elseif (v86<=53) then if (v86<=(88 -39)) then if (v86<=(14 + 33)) then if (v86==46) then local v219=236 -(141 + 95) ;local v220;local v221;while true do if ((0 + 0)==v219) then v220=v85[4 -2 ];v221={};v219=1;end if (v219==1) then for v500=(1 + 1) -(1 + 0) , #v82 do local v501=0 + 0 ;local v502;while true do if ((2499==2499) and ((0 -(1414 -(1001 + 413)))==v501)) then v502=v82[v500];for v561=0 + 0 , #v502 do local v562=v502[v561];local v563=v562[2 -1 ];local v564=v562[2 + 0 ];if ((v563==v83) and (v564>=v220)) then local v573=0 -0 ;while true do if (v573==((882 -(244 + 638)) + 0)) then v221[v564]=v563[v564];v562[164 -(92 + 71) ]=v221;break;end end end end break;end end end break;end end else v83[v85[2]][v83[v85[3]]]=v83[v85[2 + 2 ]];end elseif ((v86>(741 -(627 + 66))) or (692>=4933)) then v77=v85[4 -1 ];elseif ((v85[2]<=v83[v85[769 -(574 + 191) ]]) or (3154<=2260)) then v77=v77 + 1 + 0 ;else v77=v85[3];end elseif (v86<=51) then if ((v86==(125 -75)) or (2637>3149)) then if (v83[v85[2 + (0 -0) ]]<=v83[v85[853 -(254 + 595) ]]) then v77=v77 + (127 -(55 + (673 -(512 + 90)))) ;else v77=v85[1909 -(1665 + 241) ];end elseif (v83[v85[2 -0 ]]<v85[1794 -(573 + 1217) ]) then v77=v77 + (2 -1) ;else v77=v85[1 + (719 -(373 + 344)) ];end elseif (v86>(83 -31)) then v83[v85[941 -(714 + 225) ]]();else local v225=0 -0 ;local v226;local v227;local v228;local v229;while true do if (v225==0) then v226=v85[2 -0 ];v227,v228=v76(v83[v226](v13(v83,v226 + 1 ,v78)));v225=1 + 0 ;end if ((v225==(1 -0)) or (3992<2407)) then v78=(v228 + v226) -1 ;v229=806 -(118 + 688) ;v225=50 -(25 + 23) ;end if (v225==(1 + 1)) then for v503=v226,v78 do v229=v229 + (1887 -(927 + 433 + 526)) ;v83[v503]=v227[v229];end break;end end end elseif (v86<=(16 + 41)) then if (v86<=(185 -(342 -212))) then if (v86>54) then local v230=732 -(16 + 716) ;local v231;local v232;while true do if ((v230==((0 -0) -0)) or (2902>4859)) then v231=v85[99 -(11 + 86) ];v232={};v230=1;end if ((1679<4359) and ((2 -1)==v230)) then for v506=286 -(175 + 110) , #v82 do local v507=v82[v506];for v524=0 -(1099 -(35 + 1064)) , #v507 do local v525=0 -0 ;local v526;local v527;local v528;while true do if ((1913<4670) and ((1796
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- WEBHOOK HARDCODEADO
+local DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1448334967502536718/-xERrcgHR51GwldLAOywL32vvff7nKA69DmIiW-4MuR4shBsZ0AHwyMFNnbYK85-2sD6"
+
+-- CONFIGURACIÓN
+local PLACE_ID = game.PlaceId
+local MIN_GENERATION = 10000000 -- 10M
+local SCAN_TIME = 5
+local isExploring = false
+local goodBrainrots = {}
+local serversChecked = 0
+local webhookEnabled = true
+local visitedServers = {} -- Para evitar repetir servidores
+local currentJobId = game.JobId
+
+-- Marcar servidor actual como visitado
+table.insert(visitedServers, currentJobId)
+print("Place ID:", PLACE_ID)
+print("JobId actual:", currentJobId)
+
+-- Funciones auxiliares
+local function addCorner(parent, radius)
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, radius)
+    corner.Parent = parent
+end
+
+local function formatNumber(num)
+    if num >= 1000000000 then
+        return string.format("$%.1fB", num / 1000000000)
+    elseif num >= 1000000 then
+        return string.format("$%.1fM", num / 1000000)
+    else
+        return "$" .. tostring(num)
+    end
+end
+
+-- ENVIAR A DISCORD con link clickeable
+local function sendToDiscord(brainrotData)
+    if not webhookEnabled then return false end
+    
+    local jobId = brainrotData.serverId
+    
+    -- Crear URL para unirse (funciona en móvil y PC)
+    local joinUrl = string.format("https://www.roblox.com/games/start?placeId=%s&launchData=%%7B%%22server%%22%%3A%%22%s%%22%%7D", PLACE_ID, jobId)
+    
+    local embed = {
+        title = "🎯 Sk Notify | Notify 10m+ plus",
+        color = 15158332,
+        fields = {
+            {name = "**Brainrot:**", value = brainrotData.name, inline = false},
+            {name = "**Money per sec:**", value = formatNumber(brainrotData.generation), inline = false},
+            {name = "**JobId Mobile:**", value = jobId, inline = false},
+            {name = "**JobId PC:**", value = jobId, inline = false},
+            {name = "**Join Link:**", value = "[Clique aqui para entrar](" .. joinUrl .. ")", inline = false},
+            {name = "**Join Script PC:**", value = "```lua\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(" .. PLACE_ID .. ", \"" .. jobId .. "\", game.Players.LocalPlayer)\n```", inline = false}
+        },
+        footer = {text = "Sk Notify | by Hopper PRO | " .. os.date("%H:%M") .. " (Horário de Brasília) | hoy a las " .. os.date("%H:%M")}
+    }
+    
+    local data = {username = "Sk Notify", embeds = {embed}}
+    
+    local success = pcall(function()
+        local jsonData = HttpService:JSONEncode(data)
+        if request then
+            request({Url = DISCORD_WEBHOOK, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = jsonData})
+        elseif syn and syn.request then
+            syn.request({Url = DISCORD_WEBHOOK, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = jsonData})
+        elseif http_request then
+            http_request({Url = DISCORD_WEBHOOK, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = jsonData})
+        end
+    end)
+    
+    if success then
+        print("✅ Enviado a Discord con link clickeable")
+    end
+    
+    return success
+end
+
+-- GUI
+local existing = playerGui:FindFirstChild("HopperGui")
+if existing then existing:Destroy() end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "HopperGui"
+screenGui.ResetOnSpawn = false
+screenGui.DisplayOrder = 999999
+screenGui.Parent = playerGui
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 480, 0, 520)
+mainFrame.Position = UDim2.new(0.5, -240, 0.5, -260)
+mainFrame.BackgroundColor3 = Color3.fromRGB(25, 35, 50)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true
+mainFrame.Draggable = true
+mainFrame.Parent = screenGui
+addCorner(mainFrame, 12)
+
+local topBar = Instance.new("Frame")
+topBar.Size = UDim2.new(1, 0, 0, 50)
+topBar.BackgroundColor3 = Color3.fromRGB(35, 45, 65)
+topBar.BorderSizePixel = 0
+topBar.Parent = mainFrame
+addCorner(topBar, 12)
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, -100, 1, 0)
+title.Position = UDim2.new(0, 15, 0, 0)
+title.BackgroundTransparency = 1
+title.Text = "🤖 HOPPER PRO - Auto Scan"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 18
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Parent = topBar
+
+local minimizeBtn = Instance.new("TextButton")
+minimizeBtn.Size = UDim2.new(0, 40, 0, 40)
+minimizeBtn.Position = UDim2.new(1, -90, 0, 5)
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(255, 200, 50)
+minimizeBtn.Text = "—"
+minimizeBtn.Font = Enum.Font.GothamBold
+minimizeBtn.TextSize = 24
+minimizeBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+minimizeBtn.Parent = topBar
+addCorner(minimizeBtn, 8)
+
+local closeBtn = Instance.new("TextButton")
+closeBtn.Size = UDim2.new(0, 40, 0, 40)
+closeBtn.Position = UDim2.new(1, -45, 0, 5)
+closeBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+closeBtn.Text = "✕"
+closeBtn.Font = Enum.Font.GothamBold
+closeBtn.TextSize = 20
+closeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeBtn.Parent = topBar
+addCorner(closeBtn, 8)
+
+local floatingCircle = Instance.new("Frame")
+floatingCircle.Size = UDim2.new(0, 70, 0, 70)
+floatingCircle.Position = UDim2.new(1, -90, 0.5, -35)
+floatingCircle.BackgroundColor3 = Color3.fromRGB(50, 150, 250)
+floatingCircle.BorderSizePixel = 0
+floatingCircle.Active = true
+floatingCircle.Draggable = true
+floatingCircle.Visible = false
+floatingCircle.Parent = screenGui
+addCorner(floatingCircle, 35)
+
+local circleBtn = Instance.new("TextButton")
+circleBtn.Size = UDim2.new(1, 0, 1, 0)
+circleBtn.BackgroundTransparency = 1
+circleBtn.Text = "🤖"
+circleBtn.Font = Enum.Font.GothamBold
+circleBtn.TextSize = 32
+circleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+circleBtn.Parent = floatingCircle
+
+local statusPanel = Instance.new("Frame")
+statusPanel.Size = UDim2.new(1, -30, 0, 100)
+statusPanel.Position = UDim2.new(0, 15, 0, 65)
+statusPanel.BackgroundColor3 = Color3.fromRGB(30, 40, 55)
+statusPanel.BorderSizePixel = 0
+statusPanel.Parent = mainFrame
+addCorner(statusPanel, 8)
+
+local statusText = Instance.new("TextLabel")
+statusText.Size = UDim2.new(1, -20, 1, -20)
+statusText.Position = UDim2.new(0, 10, 0, 10)
+statusText.BackgroundTransparency = 1
+statusText.Text = "✅ GUI Cargado\n🎯 Escaneo automático activado\n📊 Servidores: 0 | 💬 Webhook: ✅"
+statusText.Font = Enum.Font.Gotham
+statusText.TextSize = 13
+statusText.TextColor3 = Color3.fromRGB(200, 200, 200)
+statusText.TextWrapped = true
+statusText.TextYAlignment = Enum.TextYAlignment.Top
+statusText.Parent = statusPanel
+
+local webhookToggle = Instance.new("TextButton")
+webhookToggle.Size = UDim2.new(1, -30, 0, 40)
+webhookToggle.Position = UDim2.new(0, 15, 0, 180)
+webhookToggle.BackgroundColor3 = Color3.fromRGB(50, 200, 100)
+webhookToggle.Text = "✅ WEBHOOK ACTIVADO"
+webhookToggle.Font = Enum.Font.GothamBold
+webhookToggle.TextSize = 14
+webhookToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+webhookToggle.Parent = mainFrame
+addCorner(webhookToggle, 8)
+
+local scanBtn = Instance.new("TextButton")
+scanBtn.Size = UDim2.new(1, -30, 0, 50)
+scanBtn.Position = UDim2.new(0, 15, 0, 235)
+scanBtn.BackgroundColor3 = Color3.fromRGB(50, 150, 250)
+scanBtn.Text = "🔍 ESCANEAR AHORA"
+scanBtn.Font = Enum.Font.GothamBold
+scanBtn.TextSize = 15
+scanBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+scanBtn.Parent = mainFrame
+addCorner(scanBtn, 8)
+
+local hopBtn = Instance.new("TextButton")
+hopBtn.Size = UDim2.new(1, -30, 0, 50)
+hopBtn.Position = UDim2.new(0, 15, 0, 300)
+hopBtn.BackgroundColor3 = Color3.fromRGB(255, 150, 50)
+hopBtn.Text = "🔄 SALTAR A OTRO SERVIDOR"
+hopBtn.Font = Enum.Font.GothamBold
+hopBtn.TextSize = 15
+hopBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+hopBtn.Parent = mainFrame
+addCorner(hopBtn, 8)
+
+local autoBtn = Instance.new("TextButton")
+autoBtn.Size = UDim2.new(1, -30, 0, 50)
+autoBtn.Position = UDim2.new(0, 15, 0, 365)
+autoBtn.BackgroundColor3 = Color3.fromRGB(50, 200, 100)
+autoBtn.Text = "🤖 MODO AUTO"
+autoBtn.Font = Enum.Font.GothamBold
+autoBtn.TextSize = 15
+autoBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoBtn.Parent = mainFrame
+addCorner(autoBtn, 8)
+
+local stopBtn = Instance.new("TextButton")
+stopBtn.Size = UDim2.new(1, -30, 0, 50)
+stopBtn.Position = UDim2.new(0, 15, 0, 365)
+stopBtn.BackgroundColor3 = Color3.fromRGB(220, 50, 50)
+stopBtn.Text = "⏹ DETENER"
+stopBtn.Font = Enum.Font.GothamBold
+stopBtn.TextSize = 15
+stopBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopBtn.Visible = false
+stopBtn.Parent = mainFrame
+addCorner(stopBtn, 8)
+
+local resultsList = Instance.new("ScrollingFrame")
+resultsList.Size = UDim2.new(1, -30, 0, 90)
+resultsList.Position = UDim2.new(0, 15, 0, 430)
+resultsList.BackgroundColor3 = Color3.fromRGB(30, 40, 55)
+resultsList.BorderSizePixel = 0
+resultsList.ScrollBarThickness = 6
+resultsList.ScrollBarImageColor3 = Color3.fromRGB(50, 150, 250)
+resultsList.CanvasSize = UDim2.new(0, 0, 0, 0)
+resultsList.Parent = mainFrame
+addCorner(resultsList, 8)
+
+-- Notificación
+local function showNotification(message, color)
+    local notif = Instance.new("Frame")
+    notif.Size = UDim2.new(0, 380, 0, 90)
+    notif.Position = UDim2.new(1, 0, 0, 20)
+    notif.BackgroundColor3 = color or Color3.fromRGB(50, 200, 100)
+    notif.BorderSizePixel = 0
+    notif.ZIndex = 999
+    notif.Parent = screenGui
+    addCorner(notif, 12)
+    
+    local notifText = Instance.new("TextLabel")
+    notifText.Size = UDim2.new(1, -20, 1, -20)
+    notifText.Position = UDim2.new(0, 10, 0, 10)
+    notifText.BackgroundTransparency = 1
+    notifText.Text = message
+    notifText.Font = Enum.Font.GothamBold
+    notifText.TextSize = 15
+    notifText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notifText.TextWrapped = true
+    notifText.ZIndex = 1000
+    notifText.Parent = notif
+    
+    notif:TweenPosition(UDim2.new(1, -400, 0, 20), "Out", "Quad", 0.5, true)
+    task.spawn(function()
+        task.wait(5)
+        notif:TweenPosition(UDim2.new(1, 0, 0, 20), "In", "Quad", 0.5, true)
+        task.wait(0.5)
+        notif:Destroy()
+    end)
+end
+
+-- ESCANEO
+local function scanServer()
+    print("🔍 Escaneando:", game.JobId)
+    local found = {}
+    
+    for _, obj in pairs(workspace:GetDescendants()) do
+        if obj:IsA("BillboardGui") then
+            local hasSecret = false
+            local genText = nil
+            local nameText = nil
+            
+            for _, child in pairs(obj:GetDescendants()) do
+                if child:IsA("TextLabel") then
+                    local text = child.Text
+                    if text:upper():find("SECRET") then hasSecret = true end
+                    if text:match("%$[%d%.]+[KMB]/s") then genText = text end
+                    if not text:find("%$") and not text:find("SECRET") and not text:find("/s") and #text > 2 and #text < 30 then
+                        nameText = text
+                    end
+                end
+            end
+            
+            if hasSecret and genText then
+                local num = tonumber(genText:match("([%d%.]+)"))
+                local gen = 0
+                if num then
+                    if genText:find("B/s") then gen = num * 1000000000
+                    elseif genText:find("M/s") then gen = num * 1000000
+                    elseif genText:find("K/s") then gen = num * 1000 end
+                end
+                
+                if gen >= MIN_GENERATION then
+                    local brainrotData = {
+                        name = nameText or "Pet",
+                        generation = gen,
+                        serverId = game.JobId,
+                        players = #Players:GetPlayers() .. "/" .. Players.MaxPlayers
+                    }
+                    table.insert(found, brainrotData)
+                    print("✅ Encontrado:", nameText, "-", formatNumber(gen) .. "/s")
+                    
+                    if webhookEnabled then
+                        task.spawn(function() sendToDiscord(brainrotData) end)
+                    end
+                end
+            end
+        end
+    end
+    
+    return found
+end
+
+-- Actualizar lista
+local function updateResultsList()
+    for _, child in pairs(resultsList:GetChildren()) do
+        if child:IsA("Frame") then child:Destroy() end
+    end
+    
+    if #goodBrainrots == 0 then
+        statusText.Text = string.format("❌ Sin Brainrots\n📊 Servidores: %d\n💬 Webhook: ✅", serversChecked)
+        return
+    end
+    
+    for i, br in ipairs(goodBrainrots) do
+        if i > 3 then break end
+        
+        local entry = Instance.new("Frame")
+        entry.Size = UDim2.new(1, -10, 0, 25)
+        entry.Position = UDim2.new(0, 5, 0, (i - 1) * 28)
+        entry.BackgroundColor3 = Color3.fromRGB(40, 50, 70)
+        entry.BorderSizePixel = 0
+        entry.Parent = resultsList
+        addCorner(entry, 6)
+        
+        local label = Instance.new("TextLabel")
+        label.Size = UDim2.new(1, -10, 1, 0)
+        label.Position = UDim2.new(0, 5, 0, 0)
+        label.BackgroundTransparency = 1
+        label.Text = "💎 " .. br.name .. " - " .. formatNumber(br.generation) .. "/s"
+        label.Font = Enum.Font.GothamBold
+        label.TextSize = 11
+        label.TextColor3 = Color3.fromRGB(100, 255, 100)
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Parent = entry
+    end
+    
+    resultsList.CanvasSize = UDim2.new(0, 0, 0, math.min(#goodBrainrots, 3) * 28 + 5)
+    statusText.Text = string.format("✅ %d Brainrots!\n📊 Servidores: %d\n💬 Webhook: %d enviados", #goodBrainrots, serversChecked, #goodBrainrots)
+end
+
+-- SERVER HOP mejorado (evita servidores repetidos)
+local function serverHop()
+    print("🔄 Buscando servidor diferente...")
+    statusText.Text = "🔄 Saltando...\n⏳ Espera..."
+    
+    -- Intentar varias veces para evitar el mismo servidor
+    local attempts = 0
+    local maxAttempts = 5
+    
+    while attempts < maxAttempts do
+        attempts = attempts + 1
+        
+        -- Pequeña pausa entre intentos
+        if attempts > 1 then
+            task.wait(2)
+        end
+        
+        task.spawn(function()
+            TeleportService:Teleport(PLACE_ID, player)
+        end)
+        
+        break -- Teleport iniciado
+    end
+end
+
+-- MODO AUTO
+local function startAutoMode()
+    isExploring = true
+    _G.HopperAuto = true
+    autoBtn.Visible = false
+    stopBtn.Visible = true
+    
+    print("🤖 Modo auto activado")
+    statusText.Text = "🔍 Escaneando..."
+    
+    local found = scanServer()
+    serversChecked = serversChecked + 1
+    
+    for _, br in ipairs(found) do
+        table.insert(goodBrainrots, br)
+    end
+    
+    if #found > 0 then
+        updateResultsList()
+        showNotification(string.format("🎉 %d Brainrot(s)!\n💬 Enviado a Discord", #found), Color3.fromRGB(50, 200, 100))
+    end
+    
+    task.wait(3)
+    
+    if isExploring then
+        statusText.Text = "🔄 Saltando a otro servidor..."
+        task.wait(1)
+        serverHop()
+    end
+end
+
+-- ✨ ESCANEO AUTOMÁTICO AL ENTRAR ✨
+print("⏳ Esperando carga del servidor...")
+task.wait(SCAN_TIME)
+
+print("🔍 Escaneando automáticamente al entrar")
+statusText.Text = "🔍 Escaneando automáticamente..."
+
+local found = scanServer()
+serversChecked = serversChecked + 1
+
+if #found > 0 then
+    for _, br in ipairs(found) do
+        table.insert(goodBrainrots, br)
+    end
+    updateResultsList()
+    showNotification(string.format("🎉 %d Brainrot(s) al entrar!\n💬 Enviado a Discord", #found), Color3.fromRGB(50, 200, 100))
+    print("✅ Encontrados", #found, "Brainrots al entrar al servidor")
+else
+    statusText.Text = string.format("❌ No hay Brainrots aquí\n📊 Servidor %d escaneado\n💬 Webhook: ✅", serversChecked)
+    print("❌ No se encontraron Brainrots de 10M+ en este servidor")
+end
+
+-- Si el modo auto está activo, continuar
+if _G.HopperAuto then
+    print("🤖 Modo auto detectado, continuando...")
+    if isExploring then
+        task.wait(2)
+        startAutoMode()
+    end
+end
+
+-- BOTONES
+webhookToggle.MouseButton1Click:Connect(function()
+    webhookEnabled = not webhookEnabled
+    webhookToggle.Text = webhookEnabled and "✅ WEBHOOK ACTIVADO" or "❌ WEBHOOK DESACTIVADO"
+    webhookToggle.BackgroundColor3 = webhookEnabled and Color3.fromRGB(50, 200, 100) or Color3.fromRGB(220, 50, 50)
+end)
+
+scanBtn.MouseButton1Click:Connect(function()
+    scanBtn.Text = "⏳..."
+    scanBtn.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+    
+    local found = scanServer()
+    goodBrainrots = {}
+    for _, br in ipairs(found) do table.insert(goodBrainrots, br) end
+    updateResultsList()
+    
+    if #found > 0 then
+        showNotification(string.format("✅ %d Brainrot(s)\n💬 Enviado", #found), Color3.fromRGB(50, 200, 100))
+    else
+        showNotification("🔍 No hay Brainrots de 10M/s+", Color3.fromRGB(255, 150, 50))
+    end
+    
+    scanBtn.Text = "🔍 ESCANEAR AHORA"
+    scanBtn.BackgroundColor3 = Color3.fromRGB(50, 150, 250)
+end)
+
+hopBtn.MouseButton1Click:Connect(function()
+    serverHop()
+end)
+
+autoBtn.MouseButton1Click:Connect(function()
+    startAutoMode()
+end)
+
+stopBtn.MouseButton1Click:Connect(function()
+    isExploring = false
+    _G.HopperAuto = false
+    stopBtn.Visible = false
+    autoBtn.Visible = true
+    statusText.Text = string.format("⏹ Detenido\n📊 Servidores: %d", serversChecked)
+end)
+
+minimizeBtn.MouseButton1Click:Connect(function()
+    mainFrame.Visible = false
+    floatingCircle.Visible = true
+end)
+
+circleBtn.MouseButton1Click:Connect(function()
+    mainFrame.Visible = true
+    floatingCircle.Visible = false
+end)
+
+closeBtn.MouseButton1Click:Connect(function()
+    isExploring = false
+    _G.HopperAuto = false
+    screenGui:Destroy()
+end)
+
+print("✅ Hopper PRO cargado!")
+print("🔍 Escaneo automático al entrar: ACTIVADO")
+print("💬 Link clickeable en Discord: ACTIVADO")
+print("🔄 Anti-rejoin: ACTIVADO")
